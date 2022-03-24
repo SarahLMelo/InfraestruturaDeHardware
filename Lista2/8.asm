@@ -10,19 +10,19 @@ loop:
 	lh x10, 1031(x0)
 
 	addi x13, x0, 0xfffff
-   	addi x11, x0, 10
+   	addi x11, x0, 0xcc
 	blt x10, x11, vermelho1
 
-	addi x11, x0, 15
+	addi x11, x0, 0x132
 	blt x10, x11, amarelo1
 
-	addi x11, x0, 20
+	addi x11, x0, 0x199
 	blt x10, x11, amarelo2
 
-	addi x11, x0, 25
+	addi x11, x0, 0x1ff
 	blt x10, x11, verde1
 
-	addi x11, x0, 30
+	addi x11, x0, 0x265
 	blt x10, x11, verde2
 
 	jal x14, vermelho2
