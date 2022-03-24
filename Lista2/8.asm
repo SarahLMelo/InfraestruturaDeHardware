@@ -1,3 +1,5 @@
+#Foi feito uma escala para funcionar corretamete no potenciometro da temperatura
+
 init:
 	lb x10, 0(x0)
 	sb x10, 1030(x0)

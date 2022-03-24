@@ -1,30 +1,31 @@
 loop:
  lb x10, 1025(x0) #Le do teclado
- lw x12, enter
+ lw x12, enter #Acabou a palavra (o usuário apertou enter)
  beq x10, x12, end
 
- lw x12, a
+ lw x12, a #Letra a
  beq x10, x12, pontua
 
- lw x12, e
+ lw x12, e #Letra e
  beq x10, x12, pontua
 
- lw x12, i
+ lw x12, i #Letra i
  beq x10, x12, pontua
 
- lw x12, o
+ lw x12, o #Letra o
  beq x10, x12, pontua
 
- lw x12, u
+ lw x12, u #Letra u
  beq x10, x12, pontua
 
  beq x0, x0, loop
 
 pontua:
- addi x11, x11, 0x1
+ addi x11, x11, 0x1 #Pontuando
  beq x0, x0, loop
-end:
- addi x11, x11, 0x30
+ 
+ end:
+ addi x11, x11, 0x30 #Finalizando
  sb x11, 1024(x0)
  halt
 
