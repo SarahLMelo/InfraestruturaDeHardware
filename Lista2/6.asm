@@ -4,6 +4,9 @@
 #x12 -> meu temp
 #x10 -> minha leitura
 #x11 -> player jogando agora
+#Saida dando 0 -> Empate
+#Saida dando 1 -> Player 1 ganhou
+#Sainda dando 2 -> Player 2 ganhou
 
 loop:
     lb x10, 1025(x0)
