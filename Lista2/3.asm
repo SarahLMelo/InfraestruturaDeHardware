@@ -1,6 +1,8 @@
-addi x10, x0, 0xffff0000
-addi x11, x0, 0x0000ffff
+addi x10, x0, 7FC038
+addi x11, x0, 3FFFFFC00
 
-srli x12, x10, 0x10
+andi x12, 0x7F8
+slli x12, x10, 0x16
+andi x11, f807ffff
 
-add x11, x11, x12
+or x11, x12, x11
